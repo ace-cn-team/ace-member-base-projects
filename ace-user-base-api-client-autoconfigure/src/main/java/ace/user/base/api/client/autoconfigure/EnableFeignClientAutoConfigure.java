@@ -1,5 +1,6 @@
 package ace.user.base.api.client.autoconfigure;
 
+import ace.user.base.api.web.controller.UserBaseController;
 import ace.user.base.define.constant.UserConstants;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
@@ -18,7 +19,7 @@ import org.springframework.context.annotation.Configuration;
         havingValue = "true",
         matchIfMissing = true
 )
-@ConditionalOnMissingBean({SmsVerifyCodeBaseController.class})
+@ConditionalOnMissingBean({UserBaseController.class})
 @ConditionalOnBean(annotation = {EnableFeignClients.class})
 @EnableFeignClients(basePackages = {UserConstants.BASE_FEIGN_CLIENT_SERVICE_PACKAGE})
 @Configuration

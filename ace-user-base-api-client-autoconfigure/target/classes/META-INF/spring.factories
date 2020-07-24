@@ -1,2 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-ace.user.base.api.client.autoconfigure.EnableFeignClientAutoConfigure

@@ -8,7 +8,8 @@
         <version>1.0.0.1</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>ace-user-base-api-web</artifactId>
+
+    <artifactId>ace-user-base-api-client-junit</artifactId>
     <dependencies>
         <dependency>
             <groupId>org.ace</groupId>
@@ -16,10 +17,8 @@
         </dependency>
         <dependency>
             <groupId>org.ace</groupId>
-            <artifactId>ace-user-base-define</artifactId>
+            <artifactId>ace-user-base-api-client-autoconfigure</artifactId>
         </dependency>
-
-
         <dependency>
             <groupId>org.ace</groupId>
             <artifactId>ace-fw-ms-application</artifactId>
@@ -34,29 +33,12 @@
         </dependency>
         <dependency>
             <groupId>org.ace</groupId>
-            <artifactId>ace-fw-restful-base-api-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.ace</groupId>
-            <artifactId>ace-fw-restful-base-api-web-mybatis-plus-autoconfigure</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.ace</groupId>
-            <artifactId>ace-fw-mybatis-plus-extension</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-extension</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.ace</groupId>
             <artifactId>ace-fw-data</artifactId>
         </dependency>
         <dependency>
             <groupId>org.ace</groupId>
             <artifactId>ace-fw-log4j2-autoconfigure</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -70,25 +52,40 @@
             <artifactId>spring-tx</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.mybatis</groupId>
-            <artifactId>mybatis</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.mybatis</groupId>
-            <artifactId>mybatis-spring</artifactId>
-        </dependency>
-        <dependency>
             <groupId>com.fasterxml.uuid</groupId>
             <artifactId>java-uuid-generator</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-openfeign-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+        <dependency>
             <groupId>io.github.openfeign</groupId>
-            <artifactId>feign-httpclient</artifactId>
-
+            <artifactId>feign-okhttp</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-gson</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-slf4j</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.github.openfeign.form</groupId>
+            <artifactId>feign-form</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.github.openfeign.form</groupId>
+            <artifactId>feign-form-spring</artifactId>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -111,6 +108,11 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <dependency>
+            <groupId>org.ace</groupId>
+            <artifactId>ace-user-base-api</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -127,6 +129,14 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.8.2</version>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
             </plugin>
         </plugins>
     </build>
