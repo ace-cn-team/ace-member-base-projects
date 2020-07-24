@@ -14,7 +14,7 @@ public interface UserConstants {
     /**
      * base api layer openfeign微服务配置包路径
      */
-    String BASE_FEIGN_CLIENT_SERVICE_PACKAGE = "ace.user.base.api.service";
+    String BASE_FEIGN_CLIENT_SERVICE_PACKAGE = "ace.user.base.api";
     /**
      * base api layer openfeign微服务自动配置
      */
