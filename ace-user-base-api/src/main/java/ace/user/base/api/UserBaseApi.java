@@ -14,7 +14,7 @@ import org.springframework.validation.annotation.Validated;
  */
 @FeignClient(
         name = UserConstants.BASE_FEIGN_CLIENT_NAME,
-        contextId = "userBaseApi",
+        contextId = "UserBaseApi",
         path = "/" + UserBaseApi.MODULE_RESTFUL_NAME
 )
 @Validated

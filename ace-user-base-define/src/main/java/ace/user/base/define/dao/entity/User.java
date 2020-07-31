@@ -41,9 +41,6 @@ public class User implements Serializable, Entity {
     @ApiModelProperty(value = "appid")
     private String appId;
 
-    @ApiModelProperty(value = "账号id")
-    private String accountId;
-
     @ApiModelProperty(value = "昵称")
     private String nickName;
     /**

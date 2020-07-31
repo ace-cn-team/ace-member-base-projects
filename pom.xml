@@ -5,9 +5,9 @@
     <parent>
         <artifactId>ace-projects</artifactId>
         <groupId>org.ace</groupId>
-        <version>1.0.0.3</version>
+        <version>1.0.0.10</version>
     </parent>
-    <version>1.0.0.1</version>
+    <version>1.0.0.3</version>
     <description>
         用户基础功能模块
     </description>
@@ -17,7 +17,9 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <ace.fw.version>1.0.0.6</ace.fw.version>
+        <ace.common.base.version>1.0.0.6</ace.common.base.version>
+        <ace.fw.version>1.0.0.11</ace.fw.version>
+        <ace.dependency.management.version>1.0.0.10</ace.dependency.management.version>
     </properties>
     <modules>
         <module>ace-user-base-api</module>
@@ -27,7 +29,22 @@
         <module>ace-user-base-api-client-junit</module>
     </modules>
     <dependencyManagement>
+
         <dependencies>
+            <dependency>
+                <groupId>org.ace</groupId>
+                <artifactId>ace-dependency-management</artifactId>
+                <version>${ace.dependency.management.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+            <dependency>
+                <groupId>org.ace</groupId>
+                <artifactId>ace-framework-projects</artifactId>
+                <version>${ace.fw.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
             <dependency>
                 <groupId>org.ace</groupId>
                 <artifactId>ace-user-base-api</artifactId>
@@ -46,63 +63,8 @@
 
             <dependency>
                 <groupId>org.ace</groupId>
-                <artifactId>ace-fw</artifactId>
-                <version>${ace.fw.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.ace</groupId>
-                <artifactId>ace-fw-ms-application</artifactId>
-                <version>${ace.fw.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.ace</groupId>
-                <artifactId>ace-fw-ms-application-autoconfigure</artifactId>
-                <version>${ace.fw.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.ace</groupId>
-                <artifactId>ace-fw-ms-discovery-server-autoconfigure</artifactId>
-                <version>${ace.fw.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.ace</groupId>
-                <artifactId>ace-fw-restful-base-api</artifactId>
-                <version>${ace.fw.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.ace</groupId>
-                <artifactId>ace-fw-restful-base-api-web</artifactId>
-                <version>${ace.fw.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.ace</groupId>
-                <artifactId>ace-fw-restful-base-api-web-mybatis-plus-autoconfigure</artifactId>
-                <version>${ace.fw.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.ace</groupId>
-                <artifactId>ace-fw-mybatis-plus-extension</artifactId>
-                <version>${ace.fw.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.ace</groupId>
-                <artifactId>ace-fw-data</artifactId>
-                <version>${ace.fw.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.ace</groupId>
-                <artifactId>ace-fw-log4j2-autoconfigure</artifactId>
-                <version>${ace.fw.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.ace</groupId>
-                <artifactId>ace-fw-mq</artifactId>
-                <version>${ace.fw.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.ace</groupId>
-                <artifactId>ace-fw-web-api-client-starter</artifactId>
-                <version>${ace.fw.version}</version>
+                <artifactId>ace-common-base-define</artifactId>
+                <version>${ace.common.base.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
