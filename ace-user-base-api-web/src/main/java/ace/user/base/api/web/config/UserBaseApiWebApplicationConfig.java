@@ -1,6 +1,9 @@
 package ace.user.base.api.web.config;
 
+import com.alibaba.cloud.nacos.NacosDiscoveryProperties;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -11,4 +14,5 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class UserBaseApiWebApplicationConfig {
+
 }
