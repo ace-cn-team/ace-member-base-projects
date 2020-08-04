@@ -7,7 +7,7 @@
         <groupId>org.ace</groupId>
         <version>1.0.0.10</version>
     </parent>
-    <version>1.0.0.4</version>
+    <version>1.0.0.5</version>
     <description>
         用户基础功能模块
     </description>
@@ -18,7 +18,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <ace.common.base.version>1.0.0.6</ace.common.base.version>
-        <ace.fw.version>1.0.0.13</ace.fw.version>
+        <ace.fw.version>1.0.0.17</ace.fw.version>
         <ace.dependency.management.version>1.0.0.10</ace.dependency.management.version>
     </properties>
     <modules>
