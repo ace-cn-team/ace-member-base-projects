@@ -56,19 +56,23 @@ public class TestBaseApi {
         User modifyUser = User.builder()
                 .nickName(avatarUrl)
                 .avatarUrl(avatarUrl)
+                .id("1")
+                .rowVersion(1)
                 .build();
-        userBaseController.update(EntityUpdateRequest.<User>builder()
+        boolean result = userBaseController.update(EntityUpdateRequest.<User>builder()
                 .entity(modifyUser)
                 .where(
                         WhereRequest.build()
-                                .eq("id", user.getId())
+                                .eq("id", modifyUser.getId())
                 )
                 .build()
         ).check();
+        // boolean result = userBaseController.updateById(modifyUser).check();
+        Assert.assertTrue(result);
         User updateedUser = userBaseController.getById(user.getId()).check();
 
-        Assert.assertEquals(updateedUser.getAvatarUrl(), avatarUrl);
-        Assert.assertEquals(updateedUser.getNickName(), nickName);
+        Assert.assertEquals(avatarUrl, updateedUser.getAvatarUrl());
+        Assert.assertEquals(nickName, updateedUser.getNickName());
 
         Assert.assertNotEquals(user.getAvatarUrl(), avatarUrl);
         Assert.assertNotEquals(user.getNickName(), nickName);
