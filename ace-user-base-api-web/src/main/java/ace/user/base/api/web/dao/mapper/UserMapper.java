@@ -1,5 +1,6 @@
 package ace.user.base.api.web.dao.mapper;
 
+import ace.fw.mybatis.plus.extension.mapper.AceBaseMapper;
 import ace.user.base.define.dao.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
@@ -13,6 +14,6 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * @since 2020-07-23
  */
 @Mapper
-public interface UserMapper extends BaseMapper<User> {
+public interface UserMapper extends AceBaseMapper<User> {
 
 }
