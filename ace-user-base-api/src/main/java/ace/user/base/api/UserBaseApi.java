@@ -1,6 +1,6 @@
 package ace.user.base.api;
 
-import ace.fw.restful.base.api.service.AbstractRestfulBaseService;
+import ace.fw.restful.base.api.AbstractBaseApi;
 import ace.user.base.define.constant.UserConstants;
 import ace.user.base.define.dao.entity.User;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -14,10 +14,11 @@ import org.springframework.validation.annotation.Validated;
  */
 @FeignClient(
         name = UserConstants.BASE_FEIGN_CLIENT_NAME,
+        url = UserConstants.BASE_FEIGN_CLIENT_URL,
         contextId = "UserBaseApi",
         path = "/" + UserBaseApi.MODULE_RESTFUL_NAME
 )
 @Validated
-public interface UserBaseApi extends AbstractRestfulBaseService<User> {
+public interface UserBaseApi extends AbstractBaseApi<User, String> {
     String MODULE_RESTFUL_NAME = "user-base";
 }

@@ -1,6 +1,7 @@
 package ace.user.base.api.web.dao.impl;
 
-import ace.fw.mybatis.plus.extension.service.impl.MybatisPlusDbServiceImpl;
+
+import ace.fw.restful.base.api.plugin.mybatisplus.impl.MybatisPlusDbServiceImpl;
 import ace.user.base.api.web.dao.UserDbService;
 import ace.user.base.api.web.dao.mapper.UserMapper;
 import ace.user.base.define.dao.entity.User;
@@ -15,7 +16,7 @@ import org.springframework.stereotype.Service;
  * @since 2020-07-23
  */
 @Service
-public class UserDbServiceImpl extends MybatisPlusDbServiceImpl<User, UserMapper>
+public class UserDbServiceImpl extends MybatisPlusDbServiceImpl<User, String, UserMapper>
         implements UserDbService {
 
 }

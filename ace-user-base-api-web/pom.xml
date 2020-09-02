@@ -5,7 +5,7 @@
     <parent>
         <artifactId>ace-user-base-projects</artifactId>
         <groupId>org.ace</groupId>
-        <version>1.0.0.8</version>
+        <version>1.0.0.9</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>ace-user-base-api-web</artifactId>
@@ -19,6 +19,10 @@
             <artifactId>ace-user-base-define</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>org.ace</groupId>
+            <artifactId>ace-user-base-api-client-autoconfigure</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.ace</groupId>
             <artifactId>ace-fw-ms-application-autoconfigure</artifactId>
@@ -55,10 +59,21 @@
             <groupId>org.ace</groupId>
             <artifactId>ace-fw-restful-base-api-web-mybatis-plus-autoconfigure</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.ace</groupId>
-            <artifactId>ace-fw-data</artifactId>
+            <artifactId>ace-fw-logic-common-autoconfigure</artifactId>
+        </dependency>
+
+        <!-- 单元测试依赖 start -->
+        <dependency>
+            <groupId>org.liquibase</groupId>
+            <artifactId>liquibase-core</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -66,10 +81,11 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-test</artifactId>
+            <groupId>org.ace</groupId>
+            <artifactId>ace-fw-junit-test-starter</artifactId>
             <scope>test</scope>
         </dependency>
+        <!-- 单元测试依赖 end -->
     </dependencies>
 
     <build>

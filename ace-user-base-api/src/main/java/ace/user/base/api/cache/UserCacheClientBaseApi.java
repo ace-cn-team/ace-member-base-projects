@@ -21,6 +21,7 @@ import javax.validation.Valid;
  */
 @FeignClient(
         name = UserConstants.BASE_FEIGN_CLIENT_NAME,
+        url = UserConstants.BASE_FEIGN_CLIENT_URL,
         contextId = "UserCacheClientBaseApi",
         path = "/" + UserCacheClientBaseApi.MODULE_RESTFUL_NAME
 )

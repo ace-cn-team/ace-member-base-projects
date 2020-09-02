@@ -1,7 +1,8 @@
 package ace.user.base.api.web.controller;
 
-import ace.fw.restful.base.api.web.AbstractRestfulController;
-import ace.user.base.api.web.dao.UserDbService;
+
+import ace.fw.restful.base.api.web.AbstractMybatisController;
+
 import ace.user.base.define.dao.entity.User;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @description
  */
 @RestController
-public class UserBaseControllerImpl extends AbstractRestfulController<User, UserDbService>
+public class UserBaseControllerImpl extends AbstractMybatisController<User, String>
         implements UserBaseController {
 
 }

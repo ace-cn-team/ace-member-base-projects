@@ -1,6 +1,7 @@
 package ace.user.base.api.web.dao;
 
-import ace.fw.mybatis.plus.extension.service.MybatisPlusDbService;
+
+import ace.fw.restful.base.api.plugin.mybatisplus.MybatisPlusDbService;
 import ace.user.base.define.dao.entity.User;
 
 /**
@@ -11,6 +12,6 @@ import ace.user.base.define.dao.entity.User;
  * @author Caspar 279397942@qq.com
  * @since 2020-07-23
  */
-public interface UserDbService extends MybatisPlusDbService<User> {
+public interface UserDbService extends MybatisPlusDbService<User, String> {
 
 }

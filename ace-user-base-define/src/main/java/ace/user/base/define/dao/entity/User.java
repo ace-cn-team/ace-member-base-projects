@@ -1,6 +1,5 @@
 package ace.user.base.define.dao.entity;
 
-import ace.fw.data.model.entity.Entity;
 import ace.user.base.define.dao.enums.user.UserSexEnum;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.Version;
@@ -31,7 +30,7 @@ import lombok.experimental.Accessors;
 @NoArgsConstructor
 @AllArgsConstructor
 @ApiModel(value = "User对象", description = "用户基础信息表")
-public class User implements Serializable, Entity {
+public class User implements Serializable {
 
 
     @ApiModelProperty(value = "id")
@@ -58,37 +57,14 @@ public class User implements Serializable, Entity {
     @ApiModelProperty(value = "个人签名")
     private String signature;
 
+    @Version
     @ApiModelProperty(value = "更新时间")
     private LocalDateTime updateTime;
 
     @ApiModelProperty(value = "创建时间")
     private LocalDateTime createTime;
 
-    @ApiModelProperty(value = "版本号和乐观锁字段,初始为1，更新自增1")
     @Version
+    @ApiModelProperty(value = "版本号和乐观锁字段,初始为1，更新自增1")
     private Integer rowVersion;
-
-
-    public static final String ID = "id";
-
-    public static final String APP_ID = "app_id";
-
-    public static final String ACCOUNT_ID = "account_id";
-
-    public static final String NICK_NAME = "nick_name";
-
-    public static final String SEX = "sex";
-
-    public static final String AVATAR_URL = "avatar_url";
-
-    public static final String BIRTHDAY = "birthday";
-
-    public static final String SIGNATURE = "signature";
-
-    public static final String UPDATE_TIME = "update_time";
-
-    public static final String CREATE_TIME = "create_time";
-
-    public static final String ROW_VERSION = "row_version";
-
 }

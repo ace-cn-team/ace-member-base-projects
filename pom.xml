@@ -7,7 +7,7 @@
         <groupId>org.ace</groupId>
         <version>1.0.0.10</version>
     </parent>
-    <version>1.0.0.8</version>
+    <version>1.0.0.9</version>
     <description>
         用户基础功能模块
     </description>
@@ -17,16 +17,15 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <ace.common.base.version>1.0.0.6</ace.common.base.version>
-        <ace.fw.version>1.0.0.38</ace.fw.version>
-        <ace.dependency.management.version>1.0.0.10</ace.dependency.management.version>
+        <ace.common.base.version>1.0.0.11</ace.common.base.version>
+        <ace.fw.version>1.0.0.48</ace.fw.version>
+        <ace.dependency.management.version>1.0.0.14</ace.dependency.management.version>
     </properties>
     <modules>
         <module>ace-user-base-api</module>
         <module>ace-user-base-api-client-autoconfigure</module>
         <module>ace-user-base-api-web</module>
         <module>ace-user-base-define</module>
-        <module>ace-user-base-api-client-junit</module>
     </modules>
     <dependencyManagement>
 

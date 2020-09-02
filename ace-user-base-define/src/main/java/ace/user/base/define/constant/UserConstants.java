@@ -12,6 +12,10 @@ public interface UserConstants {
      */
     String BASE_FEIGN_CLIENT_NAME = "${ace.ms.service.api.ace-user-base-api.name:ace-user-base-api-web}";
     /**
+     * base api layer openfeign微服务配置url
+     */
+    String BASE_FEIGN_CLIENT_URL = "${ace.ms.service.api.ace-user-base-api.url:http://localhost:8080}";
+    /**
      * base api layer openfeign微服务配置包路径
      */
     String BASE_FEIGN_CLIENT_SERVICE_PACKAGE = "ace.user.base.api";
