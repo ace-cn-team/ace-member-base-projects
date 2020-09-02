@@ -7,7 +7,7 @@
         <groupId>org.ace</groupId>
         <version>1.0.0.10</version>
     </parent>
-    <version>1.0.0.10</version>
+    <version>1.0.0.11</version>
     <description>
         用户基础功能模块
     </description>
