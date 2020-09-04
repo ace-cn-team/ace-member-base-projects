@@ -1,4 +1,4 @@
-package ace.user.base.api.web.dao;
+package ace.user.base.api.web.dal;
 
 
 import ace.fw.restful.base.api.plugin.mybatisplus.MybatisPlusDbService;

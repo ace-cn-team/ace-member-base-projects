@@ -1,12 +1,11 @@
 package ace.user.base.api.web.service.cache.impl;
 
 import ace.user.base.api.web.service.cache.UserMultiCacheOrDbService;
-import ace.user.base.api.web.dao.UserDbService;
+import ace.user.base.api.web.dal.UserDbService;
 import ace.user.base.define.dao.entity.User;
 import ace.user.base.define.module.user.request.FindByAppIdAndIdRequest;
 import com.alicp.jetcache.anno.Cached;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

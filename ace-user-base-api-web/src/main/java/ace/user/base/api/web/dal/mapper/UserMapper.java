@@ -1,9 +1,8 @@
-package ace.user.base.api.web.dao.mapper;
+package ace.user.base.api.web.dal.mapper;
 
 import ace.fw.mybatis.plus.extension.mapper.AceBaseMapper;
 import ace.user.base.define.dao.entity.User;
 import org.apache.ibatis.annotations.Mapper;
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
  * <p>

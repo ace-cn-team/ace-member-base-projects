@@ -1,9 +1,9 @@
-package ace.user.base.api.web.dao.impl;
+package ace.user.base.api.web.dal.impl;
 
 
 import ace.fw.restful.base.api.plugin.mybatisplus.impl.MybatisPlusDbServiceImpl;
-import ace.user.base.api.web.dao.UserDbService;
-import ace.user.base.api.web.dao.mapper.UserMapper;
+import ace.user.base.api.web.dal.UserDbService;
+import ace.user.base.api.web.dal.mapper.UserMapper;
 import ace.user.base.define.dao.entity.User;
 import org.springframework.stereotype.Service;
 
